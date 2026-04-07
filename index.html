@@ -520,17 +520,41 @@
     });
   });
 
-  // --- Form validation before submit ---
+  // --- Form submit via AJAX (no reload) ---
   var form = document.getElementById('lead-form');
   if (form) {
     form.addEventListener('submit', function(e) {
+      e.preventDefault();
       var phone = document.getElementById('phone').value.replace(/\D/g, '');
       if (phone.length < 11) {
-        e.preventDefault();
         document.getElementById('phone').style.borderColor = '#ED1C24';
         return;
       }
       document.getElementById('phone').style.borderColor = '';
+
+      var btn = form.querySelector('button[type="submit"]');
+      var origText = btn.textContent;
+      btn.textContent = 'Отправка...';
+      btn.disabled = true;
+
+      var data = new FormData(form);
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function(res) {
+        if (res.ok) {
+          form.innerHTML = '<div class="form-success"><h3>Спасибо за заявку!</h3><p>Наш эксперт свяжется с вами в ближайшее время.</p></div>';
+        } else {
+          btn.textContent = origText;
+          btn.disabled = false;
+          alert('Ошибка отправки. Попробуйте ещё раз.');
+        }
+      }).catch(function() {
+        btn.textContent = origText;
+        btn.disabled = false;
+        alert('Ошибка сети. Проверьте подключение и попробуйте ещё раз.');
+      });
     });
   }
 
