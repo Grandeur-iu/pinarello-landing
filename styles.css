@@ -893,6 +893,14 @@ p:last-child {
   width: auto;
 }
 
+.footer__about {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  max-width: 480px;
+  margin-bottom: 40px;
+}
+
 .footer__grid {
   display: flex;
   flex-wrap: wrap;
