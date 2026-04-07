@@ -18,9 +18,6 @@
   <div class="container">
     <a href="#" class="header__logo"><img src="я байк-2.png" alt="ябайк" class="header__logo-img"></a>
     <div class="header__right">
-      <a href="tel:+79261561098" class="header__phone">
-        <span class="header__phone-text">+7 (926) 156-10-98</span>
-      </a>
       <a href="#form" class="btn btn--primary btn--small">Консультация</a>
     </div>
   </div>
@@ -53,7 +50,7 @@
 
       <!-- DOGMA F -->
       <div class="model-card">
-        <img class="model-card__image" src="media/192c9c133ebcd0197f2438f6e1574b84.webp" alt="Pinarello Dogma F — гоночный флагман" loading="lazy">
+        <img class="model-card__image" src="media/192c9c133ebcd0197f2438f6e1574b84.png" alt="Pinarello Dogma F — гоночный флагман" loading="lazy">
         <span class="model-card__subtitle">Гоночный флагман</span>
         <h3>DOGMA F</h3>
         <p class="model-card__desc">Та самая рама, на которой INEOS Grenadiers побеждают на Гранд-турах. Карбон Torayca T1100 1K, 865 граммов. Комплектации от F3 до F9. Сборка под заказ.</p>
@@ -62,7 +59,7 @@
 
       <!-- DOGMA X -->
       <div class="model-card">
-        <img class="model-card__image" src="media/fc6f8c4bb9424637a00a5ac25fffa378.webp" alt="Pinarello Dogma X — эндуранс без границ" loading="lazy">
+        <img class="model-card__image" src="media/fc6f8c4bb9424637a00a5ac25fffa378.png" alt="Pinarello Dogma X — эндуранс без границ" loading="lazy">
         <span class="model-card__subtitle">Эндуранс без границ</span>
         <h3>DOGMA X</h3>
         <p class="model-card__desc">ДНК победителя Тур де Франс с комфортом для марафонских дистанций. Более широкие покрышки, смягчённая геометрия. Комплектации от X3 до X9.</p>
@@ -71,7 +68,7 @@
 
       <!-- BOLIDE F -->
       <div class="model-card">
-        <img class="model-card__image" src="media/aa9505cee8857bbef4f14d966183919d.webp" alt="Pinarello Bolide F — скорость без компромиссов" loading="lazy">
+        <img class="model-card__image" src="media/aa9505cee8857bbef4f14d966183919d.png" alt="Pinarello Bolide F — скорость без компромиссов" loading="lazy">
         <span class="model-card__subtitle">Скорость без компромиссов</span>
         <h3>BOLIDE F</h3>
         <p class="model-card__desc">Разделочный болид для тех, кто живёт аэродинамикой. Самый быстрый велосипед на планете. Версии TT, TR, HR. Сборка под заказ.</p>
@@ -86,21 +83,21 @@
 
     <div class="models__also-grid fade-in">
       <a href="#form" class="mini-card">
-        <img class="mini-card__image" src="media/f274fc54bc51c773f70608e026929e45.webp" alt="Pinarello Nytro" loading="lazy">
+        <img class="mini-card__image" src="media/f274fc54bc51c773f70608e026929e45.png" alt="Pinarello Nytro" loading="lazy">
         <div class="mini-card__info">
           <h4>NYTRO</h4>
           <span>Электро шоссе / гравел</span>
         </div>
       </a>
       <a href="#form" class="mini-card">
-        <img class="mini-card__image" src="media/614a58e1559a2ecac4a70ffaae88f556.webp" alt="Pinarello Maat Italia" loading="lazy">
+        <img class="mini-card__image" src="media/614a58e1559a2ecac4a70ffaae88f556.png" alt="Pinarello Maat Italia" loading="lazy">
         <div class="mini-card__info">
           <h4>MAAT ITALIA</h4>
           <span>Трек</span>
         </div>
       </a>
       <a href="#form" class="mini-card">
-        <img class="mini-card__image" src="media/57dd264397d98d15b1394b82ecf1ca48.webp" alt="Pinarello Crossista" loading="lazy">
+        <img class="mini-card__image" src="media/57dd264397d98d15b1394b82ecf1ca48.png" alt="Pinarello Crossista" loading="lazy">
         <div class="mini-card__info">
           <h4>CROSSISTA</h4>
           <span>Циклокросс</span>
@@ -172,7 +169,7 @@
       <div class="advantage fade-in">
         <svg class="advantage__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         <h4>Прямые поставки из Европы</h4>
-        <p>Полный комплект документов, велосипед в оригинальной упаковке. Европейская гарантия + 2 года гарантии от нас.</p>
+        <p>Индивидуальные условия для каждого клиента. Полный комплект документов, велосипед в оригинальной упаковке. Европейская гарантия + 2 года от нас.</p>
       </div>
 
       <div class="advantage fade-in">
@@ -264,7 +261,11 @@
       </div>
 
       <div class="form-section__form fade-in">
-        <form id="lead-form" novalidate>
+        <form id="lead-form" action="https://formsubmit.co/yabike.ru@yandex.ru" method="POST">
+          <input type="hidden" name="_subject" value="Новая заявка с лендинга Pinarello">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://grandeur-iu.github.io/pinarello-landing/#form">
+          <input type="hidden" name="_template" value="table">
           <div class="form-group">
             <label for="phone">Телефон</label>
             <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
@@ -372,12 +373,11 @@
 <footer class="footer" id="footer">
   <div class="container">
     <div class="footer__logo"><img src="я байк-2.png" alt="ябайк" class="footer__logo-img"></div>
+    <p class="footer__about">Более 20 лет работы с премиальными велосипедами. Команда профессионалов с гоночным опытом. Репутация, которую мы строили годами — и ваше доверие, которое ценим.</p>
 
     <div class="footer__grid">
       <div class="footer__col">
         <h4>Контакты</h4>
-        <a href="tel:+79261561098">+7 (926) 156-10-98</a>
-        <a href="mailto:info@yabike.ru">info@yabike.ru</a>
         <p>Крылатская ул., 10, стр. 3, Москва</p>
         <p>Заявки принимаем 24/7</p>
       </div>
@@ -520,18 +520,17 @@
     });
   });
 
-  // --- Form submit (placeholder) ---
+  // --- Form validation before submit ---
   var form = document.getElementById('lead-form');
   if (form) {
     form.addEventListener('submit', function(e) {
-      e.preventDefault();
       var phone = document.getElementById('phone').value.replace(/\D/g, '');
       if (phone.length < 11) {
+        e.preventDefault();
         document.getElementById('phone').style.borderColor = '#ED1C24';
         return;
       }
-      alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
-      form.reset();
+      document.getElementById('phone').style.borderColor = '';
     });
   }
 
