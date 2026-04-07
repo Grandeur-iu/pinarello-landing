@@ -777,6 +777,21 @@ p:last-child {
   min-height: 80px;
 }
 
+.form-success {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.form-success h3 {
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.form-success p {
+  color: var(--color-text-secondary);
+  font-size: 16px;
+}
+
 .form__fine-print {
   font-size: 12px;
   color: var(--color-text-muted);
